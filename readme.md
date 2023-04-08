@@ -6,6 +6,10 @@ Learn how to create hot-keys for web applications, in this case the project type
 
 Setting and removing hot keys is very easy but if a developer simply drops code in without seeing a working example and a plan suddenly working with hot keys can become frustrating so take time to run through the code.
 
+## WCAG
+
+By properly implementing hot keys a web application can assist keyboard only users navigate your site but not providing assistance to users how only use a keyboard may lose customers.
+
 ## Requries to run
 
 Microsoft Visual Studio 2022 athough opening up the code say in Visual Studio Code a developer can study the code, pick out what is needed and adapt to their project.
