@@ -359,3 +359,7 @@ It's never a good idea to have hot keys without the user knowing about them. In 
 
 ![q](assets/figure4.png)
 
+
+## Article
+
+https://dev.to/karenpayneoregon/creating-hot-keys-for-web-applications-cp2
