@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<link rel="stylesheet" href="css/index.css" />
+
+<div class="container">
+
+    <form class="border w-50 mt-lg-5 bg-light" method="post" id="main-content" autocomplete="off">
+        <div class="ms-2">
+            <label for="firstName" class="col-sm-2">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control w-50" name="Name" id="firstName" placeholder="First name">
+            </div>
+        </div>
+
+        <div class="ms-2">
+            <label for="Surname" class="col-sm-2">Surname</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control w-50" name="Surname" id="Surname" placeholder="Last name">
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <div class="col-sm-10">
+
+                <button type="submit"
+                        id="btn-submit"
+                        class="btn btn-outline-dark ms-2 mb-2"
+                        aria-keyshortcuts="Ctrl+Q">
+                    Enter
+                </button>
+
+            </div>
+        </div>
+
+    </form>
+
+
+    <div class="fieldset w-75">
+        <h2 class="legend fs-4 bg-primary text-white">Operations</h2>
+        <div class="mt-3">
+            <button class="btn btn-primary" id="setTrue">Set true</button>
+            <button class="btn btn-primary" id="setFalse">Set false</button>
+            <button class="btn btn-primary" id="getIno">Get</button>
+            <button class="btn btn-primary" id="delStuff">Del</button>
+            <button class="btn btn-primary" id="hasStuff">Has</button>
+            <button class="btn btn-primary" id="showHelp">Help</button>
+        </div>
+    </div>
+
+    @await Html.PartialAsync("_KeyMapper")
+</div>
+
+
+@section Scripts{
+    <script type="text/javascript" src="js/index.js"></script>
+}
+

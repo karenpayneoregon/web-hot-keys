@@ -1,0 +1,95 @@
+﻿@page
+@model HotKeyJs.Pages.KeyMapperModel
+@{
+
+}
+
+
+<link rel="stylesheet" href="lib/bootstrap-icons/font/bootstrap-icons.min.css" />
+
+<div class="alert alert-primary" role="alert">
+    Experimenting setting a single hot-key
+</div>
+
+<div class="row" id="main-content">
+    <div class="table-responsive-lg">
+        <table class="table">
+            <tr>
+
+                <td style="width: 8em;">
+                    <select id="keyCombinationsSelect" 
+                            name="keyCombinationsSelect" 
+                            class="form-select" 
+                            style="width: 9em;" 
+                            multiple aria-label="control keys for building hot key">
+                        <option value="Ctrl">Ctrl</option>
+                        <option value="Alt">Alt</option>
+                        <option value="Shift">Shift</option>
+                    </select>
+                </td>
+
+                <td style="width: 8em;">
+                    <button class="btn btn-primary" onclick="saveCombinations()">Use these</button>
+                </td>
+
+                <td style="width: 8em;">
+                    <button class="btn btn-primary" onclick="clearCombinationsSelected()">Clear these</button>
+                </td>
+
+                <td>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="keyCombinationsCharacter" class="col-form-label">Character</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text"
+                                   id="keyCombinationsCharacter"
+                                   class="form-control text-lowercase fs-5"
+                                   style="width: 2.5em"
+                                   maxlength="1"
+                                   aria-describedby="character for hot key">
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="useHotKeys" onclick='handleClick(this);'>
+                        <label class="form-check-label" for="useHotKeys">Use hot-keys</label>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        
+    </div>
+
+
+</div>
+
+<div class="mt-2">
+    <div class="col-sm-10">
+
+        <button type="submit"
+                id="btn-submit"
+                onclick="exit()"
+                class="btn btn-outline-dark ms-2 mb-2"
+                aria-keyshortcuts="Ctrl+Q">
+            Exit
+        </button>
+
+    </div>
+</div>
+
+@await Html.PartialAsync("_KeyMapper")
+
+
+
+@section Scripts
+{
+    <script language="javascript" src="js/keyMapper.js"></script>
+}
