@@ -1,4 +1,4 @@
-﻿$(document).ready(function (e) {
+﻿document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem('useHotKeys') === 'true') {
         $Application.setKeys();
     }
@@ -27,6 +27,7 @@
         $Application.showHideAccordion();
     });
 });
+
 
 window.addEventListener('beforeunload', (event) => {
     if (localStorage.getItem('useHotKeys') === 'true') {

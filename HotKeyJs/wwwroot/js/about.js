@@ -1,10 +1,8 @@
-﻿$(document).ready(function (e) {
-
+﻿document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem('useHotKeys') === 'true') {
         $Application.setAboutPageKeys();
 
     }
-
 });
 
 document.getElementById("setTrue").addEventListener("click", function () {
